@@ -1,9 +1,5 @@
-import React from 'react'
-
 const How = () => {
-  return (
-    <section>How</section>
-  )
-}
+  return <section>How</section>;
+};
 
-export default How
+export default How;
