@@ -1,8 +1,5 @@
-
 const Collections = () => {
-  return (
-    <div>Collections</div>
-  )
-}
+  return <section>Collections</section>;
+};
 
-export default Collections
+export default Collections;
