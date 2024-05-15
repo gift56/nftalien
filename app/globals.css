@@ -17,3 +17,26 @@
     @apply w-[90%] md:w-[85%] mx-auto;
   }
 }
+
+::selection {
+  background-color: #21e786;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #21e786;
+  border-radius: 1px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #182634;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
