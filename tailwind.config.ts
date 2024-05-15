@@ -17,6 +17,10 @@ const config: Config = {
       fontFamily: {
         bak: '"Bakbak One", sans-serif',
       },
+      backgroundImage: {
+        cardLinear:
+          "linear-gradient(137.5deg, #21E786 0.49%, rgba(33, 231, 134, 0) 47.32%)",
+      },
     },
   },
   plugins: [],
