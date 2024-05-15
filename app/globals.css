@@ -8,3 +8,12 @@
   scroll-behavior: smooth !important;
   font-family: "Poppins", sans-serif;
 }
+
+@layer base {
+  body {
+    @apply bg-bodydark text-white;
+  }
+  .contain {
+    @apply w-[90%] md:w-[85%] mx-auto;
+  }
+}

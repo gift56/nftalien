@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#21E786",
         dark: "#141B22",
         graycolor: "#c2c3c5",
+        bodydark: "#040B11",
       },
       fontFamily: {
         bak: '"Bakbak One", sans-serif',
