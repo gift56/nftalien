@@ -10,6 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#21E786",
+        dark: "#141B22",
+        graycolor: "#c2c3c5",
+      },
+      fontFamily: {
+        bak: '"Bakbak One", sans-serif',
       },
     },
   },
