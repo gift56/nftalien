@@ -24,13 +24,13 @@ const Hero = () => {
         <div className="flex w-full items-center justify-center gap-5">
           <button
             type="button"
-            className="w-fit py-3 px-6 flex items-center justify-center gap-3 bg-primary rounded text-base font-bak font-normal uppercase text-dark hover:opacity-80 transition-all duration-300"
+            className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 bg-primary rounded text-xs md:text-base font-bak font-normal uppercase text-dark hover:opacity-80 transition-all duration-300"
           >
             connect wallet
           </button>
           <button
             type="button"
-            className="w-fit py-3 px-6 flex items-center justify-center gap-3 border-2 border-primary rounded text-base font-bak font-normal uppercase text-white hover:opacity-80 transition-all duration-300"
+            className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 border-2 border-primary rounded text-xs md:text-base font-bak font-normal uppercase text-white hover:opacity-80 transition-all duration-300"
           >
             whitelist now
           </button>
