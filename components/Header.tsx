@@ -91,8 +91,21 @@ const Header = () => {
               className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-dark rounded"
             >
               <FaDiscord size={18} />
-              <span className="text-base font-bak font-normal">Discord</span>
+              <span className="text-base font-bak font-normal uppercase">Discord</span>
             </Link>
+            <button
+              type="button"
+              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded"
+            >
+              <Image
+                src="/icons/walletIcon.png"
+                alt="wallet icon"
+                priority
+                width={21}
+                height={18}
+              />
+              <span className="text-base font-bak font-normal uppercase text-dark">Connect</span>
+            </button>
           </div>
           <span
             onClick={() => setMobileNav((prev) => !prev)}
