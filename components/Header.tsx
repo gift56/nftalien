@@ -122,7 +122,7 @@ const Header = () => {
       <div
         className={`${
           mobileNav ? "left-0" : "-left-full"
-        } lg:hidden flex justify-end h-screen bg-black/40 gap-7 absolute top-0 w-full z-40 transition-all duration-300`}
+        } lg:hidden flex justify-start h-screen bg-black/40 gap-7 absolute top-0 w-full z-40 transition-all duration-300`}
       >
         <div
           ref={modalRef}
