@@ -1,3 +1,5 @@
+"use client";
+
 const Header = () => {
   return (
     <header className="W-full bg-bodydark sticky">
