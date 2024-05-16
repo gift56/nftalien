@@ -91,7 +91,9 @@ const Header = () => {
               className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-dark rounded"
             >
               <FaDiscord size={18} />
-              <span className="text-base font-bak font-normal uppercase">Discord</span>
+              <span className="text-base font-bak font-normal uppercase">
+                Discord
+              </span>
             </Link>
             <button
               type="button"
@@ -104,7 +106,9 @@ const Header = () => {
                 width={21}
                 height={18}
               />
-              <span className="text-base font-bak font-normal uppercase text-dark">Connect</span>
+              <span className="text-base font-bak font-normal uppercase text-dark">
+                Connect
+              </span>
             </button>
           </div>
           <span
@@ -114,6 +118,68 @@ const Header = () => {
             {mobileNav === false && <FaBars size={25} />}
           </span>
         </nav>
+      </div>
+
+      <div
+        className={`${
+          mobileNav ? "right-0" : "-right-[326%]"
+        } lg:hidden flex justify-end h-screen bg-black/40 gap-7 absolute top-0 w-full z-40 transition-all duration-300`}
+      >
+        <div
+          ref={modalRef}
+          className="flex flex-col items-start justify-between h-full bg-black text-white py-4 px-7 w-[250px]"
+        >
+          <div className="w-full flex flex-col items-start gap-8">
+            <div className="w-full flex items-center justify-end gap-6">
+              <button
+                type="button"
+                className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded"
+              >
+                <Image
+                  src="/icons/walletIcon.png"
+                  alt="wallet icon"
+                  priority
+                  width={21}
+                  height={18}
+                />
+                <span className="text-base font-bak font-normal uppercase text-dark">
+                  Connect
+                </span>
+              </button>
+              <span
+                className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg"
+                onClick={() => setMobileNav(false)}
+              >
+                <MdClose size={25} />
+              </span>
+            </div>
+            <nav className="flex flex-col w-full items-start justify-start gap-6">
+              {navLinks.map((item, index) => (
+                <Link
+                  href={item.href}
+                  key={index}
+                  onClick={() => setMobileNav(false)}
+                  className="text-base uppercase font-normal text-white font-bak flex items-center justify-start gap-2 cursor-pointer hover:text-primary transition-all duration-300"
+                >
+                  {item.text}
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="flex items-center justify-start gap-4">
+            {socialIcons.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center"
+              >
+                <item.icon size={20} />
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );
