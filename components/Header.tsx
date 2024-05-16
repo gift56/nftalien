@@ -57,7 +57,21 @@ const Header = () => {
   return (
     <header className="W-full bg-bodydark sticky">
       <div className="contain">
-        <div className="w-full py-4"></div>
+        <nav
+          aria-label="navigation"
+          className="w-full flex items-center justify-between py-4"
+        >
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              alt="creon logo"
+              width={140}
+              height={39}
+              priority
+              className="!w-[120px]"
+            />
+          </Link>
+        </nav>
       </div>
     </header>
   );
