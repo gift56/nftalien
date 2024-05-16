@@ -167,17 +167,18 @@ const Header = () => {
             </nav>
           </div>
           <div className="flex items-center justify-start gap-4">
-            {socialIcons.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center"
-              >
-                <item.icon size={20} />
-              </Link>
-            ))}
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-dark">
+              <MdWbSunny size={18} className="text-primary" />
+            </span>
+            <Link
+              href="https:discord.com"
+              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-dark rounded"
+            >
+              <FaDiscord size={18} />
+              <span className="text-base font-bak font-normal uppercase">
+                Discord
+              </span>
+            </Link>
           </div>
         </div>
       </div>
