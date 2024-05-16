@@ -69,3 +69,9 @@ export const storyData = [
     desc: "Get limited-edition items from Alienverse collabs with fashion and luxury brands.",
   },
 ];
+
+export const partnerData = [
+  {
+    icon: "/images/partnerImage1.png",
+  },
+];
