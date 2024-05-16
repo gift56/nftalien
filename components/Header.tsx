@@ -68,9 +68,20 @@ const Header = () => {
               width={140}
               height={39}
               priority
-              className="!w-[120px]"
+              className="!w-[140px] md:!w-[160px]"
             />
           </Link>
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((item, index) => (
+              <Link
+                href={item.href}
+                key={index}
+                className="text-base uppercase font-normal text-white font-bak flex items-center justify-start gap-2 cursor-pointer hover:text-primary transition-all duration-300"
+              >
+                {item.text}
+              </Link>
+            ))}
+          </nav>
         </nav>
       </div>
     </header>
