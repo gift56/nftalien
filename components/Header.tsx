@@ -119,15 +119,14 @@ const Header = () => {
           </span>
         </nav>
       </div>
-
       <div
         className={`${
-          mobileNav ? "right-0" : "-right-[326%]"
+          mobileNav ? "left-0" : "-left-full"
         } lg:hidden flex justify-end h-screen bg-black/40 gap-7 absolute top-0 w-full z-40 transition-all duration-300`}
       >
         <div
           ref={modalRef}
-          className="flex flex-col items-start justify-between h-full bg-black text-white py-4 px-7 w-[250px]"
+          className="flex flex-col items-start justify-between h-full bg-dark text-white py-4 px-7 w-[250px]"
         >
           <div className="w-full flex flex-col items-start gap-8">
             <div className="w-full flex items-center justify-end gap-6">
@@ -146,10 +145,7 @@ const Header = () => {
                   Connect
                 </span>
               </button>
-              <span
-                className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg"
-                onClick={() => setMobileNav(false)}
-              >
+              <span className="text-white" onClick={() => setMobileNav(false)}>
                 <MdClose size={25} />
               </span>
             </div>
