@@ -21,5 +21,32 @@ export const collectionData = [
     image: "/icons/collectionImage1.png",
     title: "sKISIRS #02",
   },
- 
+  {
+    image: "/icons/collectionImage2.png",
+    title: "sKELATON #01",
+  },
+  {
+    image: "/icons/collectionImage3.png",
+    title: "sKISIRS #02",
+  },
+  {
+    image: "/icons/collectionImage4.png",
+    title: "sKISIRS #02",
+  },
+  {
+    image: "/icons/collectionImage5.png",
+    title: "sKISIRS #02",
+  },
+  {
+    image: "/icons/collectionImage6.png",
+    title: "sKELATON #01",
+  },
+  {
+    image: "/icons/collectionImage7.png",
+    title: "sKISIRS #02",
+  },
+  {
+    image: "/icons/collectionImage8.png",
+    title: "sKISIRS #02",
+  },
 ];
