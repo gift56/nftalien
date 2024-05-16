@@ -97,7 +97,7 @@ const Header = () => {
             </Link>
             <button
               type="button"
-              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded"
+              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300"
             >
               <Image
                 src="/icons/walletIcon.png"
@@ -132,7 +132,7 @@ const Header = () => {
             <div className="w-full flex items-center justify-end gap-6">
               <button
                 type="button"
-                className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded"
+                className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300"
               >
                 <Image
                   src="/icons/walletIcon.png"
