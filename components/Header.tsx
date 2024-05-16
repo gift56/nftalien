@@ -55,7 +55,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="W-full bg-bodydark sticky">
+    <header className="W-full bg-bodydark sticky z-40">
       <div className="contain">
         <nav
           aria-label="navigation"
