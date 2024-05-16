@@ -13,7 +13,7 @@ const How = () => {
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
             {howData.map((item, index) => (
               <Card key={index}>
-                <div className="w-full py-5 px-4 flex flex-col items-center justify-center gap-4 h-[210px]">
+                <div className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[210px]">
                   <Image
                     src={item.icon}
                     alt="how icon"
@@ -22,6 +22,14 @@ const How = () => {
                     priority
                     className="!w-fit !h-fit"
                   />
+                  <div className="w-full flex flex-col items-center justify-center gap-1">
+                    <h3 className="text-lg uppercase font-bak font-normal text-primary">
+                      STEP {index + 1}
+                    </h3>
+                    <h2 className="text-lg text-center uppercase font-bak font-normal text-white">
+                      {item.title}
+                    </h2>
+                  </div>
                 </div>
               </Card>
             ))}
