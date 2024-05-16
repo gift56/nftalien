@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { MdClose } from "react-icons/md";
-import { FaBars } from "react-icons/fa";
+import { MdClose, MdWbSunny } from "react-icons/md";
+import { FaBars, FaDiscord } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -82,6 +82,24 @@ const Header = () => {
               </Link>
             ))}
           </nav>
+          <div className="hidden lg:flex items-center gap-4">
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-dark">
+              <MdWbSunny size={18} className="text-primary" />
+            </span>
+            <Link
+              href="https:discord.com"
+              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-dark rounded"
+            >
+              <FaDiscord size={18} />
+              <span className="text-base font-bak font-normal">Discord</span>
+            </Link>
+          </div>
+          <span
+            onClick={() => setMobileNav((prev) => !prev)}
+            className="flex lg:hidden text-white rounded-lg"
+          >
+            {mobileNav === false && <FaBars size={25} />}
+          </span>
         </nav>
       </div>
     </header>
