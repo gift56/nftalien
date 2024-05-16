@@ -50,3 +50,10 @@ export const collectionData = [
     title: "sKISIRS #02",
   },
 ];
+
+export const storyData = [
+  {
+    title: "Daily Tokens",
+    desc: "Earn interstellar tokens passively by staking your collectible NFT.",
+  },
+];
