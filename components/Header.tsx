@@ -8,25 +8,30 @@ import { FaBars } from "react-icons/fa";
 
 const navLinks = [
   {
-    text: "Creon Pass",
-    href: "pass",
-    soonText: false,
+    text: "Home",
+    href: "/",
   },
+ 
   {
-    text: "Token",
-    href: "token",
-    soonText: true,
+    text: "About",
+    href: "/",
   },
+ 
   {
-    text: "AI Revenue",
-    href: "revenue",
-    soonText: true,
+    text: "roadmap",
+    href: "/",
   },
+ 
   {
-    text: "AI Launchpad",
-    href: "launchpad",
-    soonText: true,
+    text: "COLLECTION",
+    href: "/",
   },
+ 
+  {
+    text: "FAQS",
+    href: "/",
+  },
+ 
 ];
 
 const Header = () => {
