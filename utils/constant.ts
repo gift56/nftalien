@@ -74,4 +74,52 @@ export const partnerData = [
   {
     icon: "/images/partnerImage1.png",
   },
+  {
+    icon: "/images/partnerImage2.png",
+  },
+  {
+    icon: "/images/partnerImage3.png",
+  },
+  {
+    icon: "/images/partnerImage4.png",
+  },
+  {
+    icon: "/images/partnerImage5.png",
+  },
+  {
+    icon: "/images/partnerImage6.png",
+  },
+  {
+    icon: "/images/partnerImage7.png",
+  },
+  {
+    icon: "/images/partnerImage8.png",
+  },
+  {
+    icon: "/images/partnerImage9.png",
+  },
+  {
+    icon: "/images/partnerImage10.png",
+  },
+  {
+    icon: "/images/partnerImage12.png",
+  },
+  {
+    icon: "/images/partnerImage13.png",
+  },
+  {
+    icon: "/images/partnerImage14.png",
+  },
+  {
+    icon: "/images/partnerImage15.png",
+  },
+  {
+    icon: "/images/partnerImage16.png",
+  },
+  {
+    icon: "/images/partnerImage17.png",
+  },
+  {
+    icon: "/images/partnerImage18.png",
+  },
 ];
