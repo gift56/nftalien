@@ -56,4 +56,16 @@ export const storyData = [
     title: "Daily Tokens",
     desc: "Earn interstellar tokens passively by staking your collectible NFT.",
   },
+  {
+    title: "Exclusive Discounts",
+    desc: "Tokens and NFTs can be used for discounts at top fashion brands.",
+  },
+  {
+    title: "Galactic Merch",
+    desc: "Members-only merch designed by David and other world-renowned artists.",
+  },
+  {
+    title: "Limited-Edition Collabs",
+    desc: "Get limited-edition items from Alienverse collabs with fashion and luxury brands.",
+  },
 ];
