@@ -16,3 +16,10 @@ export const howData = [
     title: "receive Your NFTs",
   },
 ];
+export const collectionData = [
+  {
+    image: "/icons/collectionImage1.png",
+    title: "sKISIRS #02",
+  },
+ 
+];
