@@ -41,14 +41,3 @@ img {
   user-select: none;
 }
 
-.card:hover::before {
-  animation: rotate 2s linear 1;
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

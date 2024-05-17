@@ -13,7 +13,7 @@ const How = () => {
             {howData.map((item, index) => (
               <div
                 key={index}
-                className="w-full py-5 px-2 flex flex-col items-center justify-center  gap-4 h-[210px] relative overflow-hidden bg-dark before:content-[''] before:absolute before:w-[20%] before:h-[170%] before:bg-cardLinear before:rotate-[-52deg] after:content-[''] after:absolute after:inset-[5px] after:bg-dark card"
+                className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[210px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
               >
                 <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
                   <Image
