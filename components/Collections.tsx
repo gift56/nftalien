@@ -1,3 +1,5 @@
+import { collectionData } from "@/utils/constant";
+
 const Collections = () => {
   return (
     <section className="w-full py-12">
@@ -7,7 +9,9 @@ const Collections = () => {
             HOT COLLECTION
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
-            
+            {collectionData.map((item, index) => (
+              <div key={index} className=""></div>
+            ))}
           </div>
         </div>
       </div>
