@@ -10,7 +10,10 @@ const Partners = () => {
           </h2>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 items-start justify-start gap-3">
             {partnerData.map((item, index) => (
-              <div></div>
+              <div
+                key={index}
+                className="w-full h-[100px] hover:bg-dark flex items-center justify-center"
+              ></div>
             ))}
           </div>
         </div>
