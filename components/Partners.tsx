@@ -1,3 +1,5 @@
+import { partnerData } from "@/utils/constant";
+
 const Partners = () => {
   return (
     <section className="w-full py-12">
@@ -7,7 +9,9 @@ const Partners = () => {
             <span className="font-bak text-primary">BINABOX</span> pARTNER
           </h2>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 items-start justify-start gap-3">
-
+            {partnerData.map((item, index) => (
+              <div></div>
+            ))}
           </div>
         </div>
       </div>
