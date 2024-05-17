@@ -37,8 +37,8 @@ const Story = () => {
               READ MORE
             </button>
           </div>
-          <div className="w-full lg:flex-1">
-            
+          <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-5">
+            {}
           </div>
         </div>
       </div>
