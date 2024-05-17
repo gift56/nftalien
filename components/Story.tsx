@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Story = () => {
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-12 overflow-hidden">
       <div className="contain">
         <div className="w-full flex flex-col lg:flex-row gap-8 items-center justify-center">
           <div className="w-full lg:flex-1 flex flex-col gap-8 items-center justify-center lg:items-start lg:justify-start relative">
@@ -13,12 +13,12 @@ const Story = () => {
               width={276}
               height={276}
               priority
-              className="!w-fit !h-fit"
+              className="!w-[120px] !h-[120px] -top-10 left-0 md:!w-fit md:!h-fit absolute md:-top-32 md:left-10"
             />
-            <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase">
+            <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase relative">
               tHE STORY
             </h2>
-            <p className="text-base font-normal md:text-lg text-graycolor md:max-w-[635px] text-center lg:text-start">
+            <p className="text-base font-normal md:text-lg text-graycolor md:max-w-[635px] text-center lg:text-start relative">
               Our collection's priority is to reward NFT holders by developing
               utilities they can use in their current everyday life. Not in a
               hypothetical future.
@@ -48,7 +48,7 @@ const Story = () => {
               READ MORE
             </button>
           </div>
-          <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-5">
+          <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-5 relative">
             {storyData.map((item, index) => (
               <div
                 key={index}
@@ -67,6 +67,16 @@ const Story = () => {
                 </div>
               </div>
             ))}
+            <div className="w-full flex items-end justify-end">
+              <Image
+                src="/icons/starIcon.png"
+                alt="story icon"
+                width={276}
+                height={276}
+                priority
+                className="!w-[120px] !h-[120px] md:absolute bottom-0 right-0 md:-right-24 md:-bottom-6 rotate-[120deg]"
+              />
+            </div>
           </div>
         </div>
       </div>
