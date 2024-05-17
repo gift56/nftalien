@@ -1,5 +1,4 @@
 import { howData } from "@/utils/constant";
-import Card from "./CardComponent/Card";
 import Image from "next/image";
 
 const How = () => {
@@ -12,8 +11,11 @@ const How = () => {
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
             {howData.map((item, index) => (
-              <Card key={index} height={210}>
-                <div className="w-full py-5 px-2 flex flex-col items-center justify-center  gap-4 h-[210px] relative">
+              <div
+                key={index}
+                className="w-full py-5 px-2 flex flex-col items-center justify-center  gap-4 h-[210px] relative overflow-hidden bg-dark before:content-[''] before:absolute before:w-[20%] before:h-[170%] before:bg-cardLinear before:rotate-[-52deg] after:content-[''] after:absolute after:inset-[5px] after:bg-dark card"
+              >
+                <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
                   <Image
                     src={item.icon}
                     alt="how icon"
@@ -31,7 +33,7 @@ const How = () => {
                     </h2>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>

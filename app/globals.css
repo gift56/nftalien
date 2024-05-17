@@ -41,8 +41,8 @@ img {
   user-select: none;
 }
 
-.card::before {
-  animation: rotate 2s linear infinite;
+.card:hover::before {
+  animation: rotate 2s linear 1;
 }
 @keyframes rotate {
   from {
