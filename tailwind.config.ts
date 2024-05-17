@@ -18,8 +18,10 @@ const config: Config = {
         bak: '"Bakbak One", sans-serif',
       },
       backgroundImage: {
-        cardLinear:
-          "linear-gradient(137.5deg, #21E786 0.49%, #21E786 47.32%)",
+        cardLinear: "linear-gradient(137.5deg, #21E786 0.49%, #21E786 47.32%)",
+      },
+      boxShadow: {
+        textshad: "0px 4px 16px 0px #FFFFFF66",
       },
     },
   },
