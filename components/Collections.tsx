@@ -1,5 +1,6 @@
 import { collectionData } from "@/utils/constant";
 import Image from "next/image";
+import { MotionContainer } from "./MotionContainer";
 
 const Collections = () => {
   return (
