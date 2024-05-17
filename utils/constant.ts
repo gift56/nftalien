@@ -102,6 +102,9 @@ export const partnerData = [
     icon: "/images/partnerImage10.png",
   },
   {
+    icon: "/images/partnerImage11.png",
+  },
+  {
     icon: "/images/partnerImage12.png",
   },
   {
