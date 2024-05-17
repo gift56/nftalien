@@ -1,3 +1,5 @@
+import { storyData } from "@/utils/constant";
+
 const Story = () => {
   return (
     <section className="w-full py-12">
@@ -38,7 +40,17 @@ const Story = () => {
             </button>
           </div>
           <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-5">
-            {}
+            {storyData.map((item, index) => (
+              <div
+                key={index}
+                className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[210px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
+              >
+                <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
+                  <h6 className="text-4xl md:text-6xl font-normal font-bak text-primary">0{index + 1}</h6>
+                  <h3 className="text-xl font-normal font-bak text-white">Daily Tokens</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
