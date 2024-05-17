@@ -1,4 +1,5 @@
 import { storyData } from "@/utils/constant";
+import Image from "next/image";
 
 const Story = () => {
   return (
@@ -6,6 +7,14 @@ const Story = () => {
       <div className="contain">
         <div className="w-full flex flex-col lg:flex-row gap-8 items-center justify-center">
           <div className="w-full lg:flex-1 flex flex-col gap-8 items-center justify-center lg:items-start lg:justify-start relative">
+            <Image
+              src="/icons/starIcon.png"
+              alt="story icon"
+              width={276}
+              height={276}
+              priority
+              className="!w-fit !h-fit"
+            />
             <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase">
               tHE STORY
             </h2>
