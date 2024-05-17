@@ -1,7 +1,15 @@
 import { storyData } from "@/utils/constant";
 import Image from "next/image";
+import { MotionContainer } from "./MotionContainer";
 
 const Story = () => {
+  const stagger = 0.25;
+
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, sclae: 1 },
+  };
+
   return (
     <section className="w-full py-12 overflow-hidden">
       <div className="contain">
@@ -15,15 +23,35 @@ const Story = () => {
               priority
               className="!w-[120px] !h-[120px] -top-10 left-0 md:!w-fit md:!h-fit absolute md:-top-32 md:left-10"
             />
-            <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase relative">
-              tHE STORY
-            </h2>
-            <p className="text-base font-normal md:text-lg text-graycolor md:max-w-[635px] text-center lg:text-start relative">
-              Our collection's priority is to reward NFT holders by developing
-              utilities they can use in their current everyday life. Not in a
-              hypothetical future.
-            </p>
-            <div className="flex items-start justify-start gap-8">
+            <MotionContainer
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1 }}
+            >
+              <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase relative">
+                tHE STORY
+              </h2>
+            </MotionContainer>
+            <MotionContainer
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1, delay: 0.1 }}
+            >
+              <p className="text-base font-normal md:text-lg text-graycolor md:max-w-[635px] text-center lg:text-start relative">
+                Our collection's priority is to reward NFT holders by developing
+                utilities they can use in their current everyday life. Not in a
+                hypothetical future.
+              </p>
+            </MotionContainer>
+            <MotionContainer
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1, delay: 0.2 }}
+              className="flex items-start justify-start gap-8"
+            >
               <div className="flex flex-col items-start justify-start gap-2">
                 <p className="text-base font-normal text-graycolor font-bak capitalize">
                   Total Item
@@ -40,18 +68,34 @@ const Story = () => {
                   1000+
                 </h4>
               </div>
-            </div>
-            <button
-              type="button"
-              className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 border-2 border-primary rounded text-xs md:text-base font-bak font-normal uppercase text-white hover:opacity-80 transition-all duration-300"
+            </MotionContainer>
+            <MotionContainer
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1, delay: 0.3 }}
             >
-              READ MORE
-            </button>
+              <button
+                type="button"
+                className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 border-2 border-primary rounded text-xs md:text-base font-bak font-normal uppercase text-white hover:opacity-80 transition-all duration-300"
+              >
+                READ MORE
+              </button>
+            </MotionContainer>
           </div>
           <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 items-start justify-start gap-5 relative">
             {storyData.map((item, index) => (
-              <div
+              <MotionContainer
                 key={index}
+                variants={variants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * stagger,
+                  ease: "easeInOut",
+                  duration: 0.5,
+                }}
                 className="w-full py-7 px-2 flex flex-col items-center justify-center gap-4 h-[210px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
               >
                 <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
@@ -65,7 +109,7 @@ const Story = () => {
                     {item.desc}
                   </p>
                 </div>
-              </div>
+              </MotionContainer>
             ))}
             <div className="w-full flex items-end justify-end">
               <Image
