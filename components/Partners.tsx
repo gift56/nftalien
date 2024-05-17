@@ -13,7 +13,7 @@ const Partners = () => {
             {partnerData.map((item, index) => (
               <div
                 key={index}
-                className="w-full h-[100px] hover:bg-dark flex items-center justify-center"
+                className="w-full h-[100px] hover:bg-dark flex items-center justify-center transition-all"
               >
                 <Image
                   src={item.icon}
