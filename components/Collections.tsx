@@ -13,9 +13,9 @@ const Collections = () => {
             {collectionData.map((item, index) => (
               <div
                 key={index}
-                className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[378px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
+                className="w-full py-4 px-2 flex flex-col items-start justify-start gap-4 h-[350px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:top-[-42%] before:left-[48%] before:hover:w-[20%] before:hover:h-[200%] before:hover:bg-cardLinear before:hover:rotate-[-40deg] before:transition-all before:duration-300 after:hover:content-[''] after:hover:absolute after:hover:inset-[5px] after:hover:bg-dark"
               >
-                <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
+                <div className="relative z-10 w-full flex flex-col items-start justify-between gap-4">
                   <Image
                     src={item.image}
                     alt="collection icon"
@@ -24,6 +24,9 @@ const Collections = () => {
                     priority
                     className="!w-full !h-fit"
                   />
+                  <h4 className="text-lg font-normal text-white font-bak md:text-xl uppercase">
+                    {item.title}
+                  </h4>
                 </div>
               </div>
             ))}
