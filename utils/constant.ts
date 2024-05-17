@@ -18,35 +18,35 @@ export const howData = [
 ];
 export const collectionData = [
   {
-    image: "/icons/collectionImage1.png",
+    image: "/images/collectionImage1.png",
     title: "sKISIRS #02",
   },
   {
-    image: "/icons/collectionImage2.png",
+    image: "/images/collectionImage2.png",
     title: "sKELATON #01",
   },
   {
-    image: "/icons/collectionImage3.png",
+    image: "/images/collectionImage3.png",
     title: "sKISIRS #02",
   },
   {
-    image: "/icons/collectionImage4.png",
+    image: "/images/collectionImage4.png",
     title: "sKISIRS #02",
   },
   {
-    image: "/icons/collectionImage5.png",
+    image: "/images/collectionImage5.png",
     title: "sKISIRS #02",
   },
   {
-    image: "/icons/collectionImage6.png",
+    image: "/images/collectionImage6.png",
     title: "sKELATON #01",
   },
   {
-    image: "/icons/collectionImage7.png",
+    image: "/images/collectionImage7.png",
     title: "sKISIRS #02",
   },
   {
-    image: "/icons/collectionImage8.png",
+    image: "/images/collectionImage8.png",
     title: "sKISIRS #02",
   },
 ];
