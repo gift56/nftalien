@@ -1,4 +1,5 @@
 import { partnerData } from "@/utils/constant";
+import Image from "next/image";
 
 const Partners = () => {
   return (
@@ -13,7 +14,15 @@ const Partners = () => {
               <div
                 key={index}
                 className="w-full h-[100px] hover:bg-dark flex items-center justify-center"
-              ></div>
+              >
+                <Image
+                  src={item.icon}
+                  alt="partner Icon"
+                  width={162}
+                  height={60}
+                  priority
+                />
+              </div>
             ))}
           </div>
         </div>
