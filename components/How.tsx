@@ -12,8 +12,8 @@ const How = () => {
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
             {howData.map((item, index) => (
-              <Card key={index}>
-                <div className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[210px]">
+              <Card key={index} height={210}>
+                <div className="w-full py-5 px-2 flex flex-col items-center justify-center  gap-4 h-[210px] relative">
                   <Image
                     src={item.icon}
                     alt="how icon"

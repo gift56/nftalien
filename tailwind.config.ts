@@ -19,7 +19,7 @@ const config: Config = {
       },
       backgroundImage: {
         cardLinear:
-          "linear-gradient(137.5deg, #21E786 0.49%, rgba(33, 231, 134, 0) 47.32%)",
+          "linear-gradient(137.5deg, #21E786 0.49%, #21E786 47.32%)",
       },
     },
   },

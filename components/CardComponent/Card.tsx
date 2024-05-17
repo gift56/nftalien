@@ -1,6 +1,15 @@
-const Card = ({ children }: { children: React.ReactNode }) => {
+const Card = ({
+  children,
+  height,
+}: {
+  children: React.ReactNode;
+  height: number;
+}) => {
   return (
-    <div className="w-full bg-dark relative before:content-[''] before:absolute before:w-2/4 before:h-[180%]">
+    <div
+      style={{ height: height }}
+      className="w-full overflow-hidden bg-dark before:content-[''] before:absolute before:w-[20%] before:h-[170%] before:bg-cardLinear before:rotate-[-52deg] after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
+    >
       {children}
     </div>
   );
