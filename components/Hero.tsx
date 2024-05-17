@@ -17,8 +17,7 @@ const Hero = () => {
       <div className="contain relative z-10 flex flex-col gap-5 items-center justify-center">
         <MotionContainer
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", duration: 1 }}
         >
           <h1 className="text-white text-center text-3xl md:text-5xl lg:text-[62px] lg:leading-[74.8px] font-normal font-bak uppercase">
@@ -27,8 +26,7 @@ const Hero = () => {
         </MotionContainer>
         <MotionContainer
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ type: "spring", duration: 1, delay: 0.1 }}
         >
           <p className="text-lg md:text-xl font-normal md:max-w-[752px] text-center">
@@ -38,8 +36,7 @@ const Hero = () => {
         </MotionContainer>
         <MotionContainer
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", duration: 1, delay: 0.2 }}
         >
           <div className="flex w-full items-center justify-center gap-5">
