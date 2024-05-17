@@ -1,6 +1,7 @@
 import Collections from "@/components/Collections";
 import Hero from "@/components/Hero";
 import How from "@/components/How";
+import Partners from "@/components/Partners";
 import Story from "@/components/Story";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <How />
       <Collections />
       <Story />
+      <Partners />
     </main>
   );
 }
