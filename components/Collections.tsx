@@ -56,11 +56,13 @@ const Collections = () => {
               </MotionContainer>
             ))}
           </div>
-          <Link href="/collections">
-            <button className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300">
-              View All
-            </button>
-          </Link>
+          <div className="w-full flex items-center justify-center">
+            <Link href="/collections">
+              <button className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300">
+                View All
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
