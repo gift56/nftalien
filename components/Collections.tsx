@@ -1,6 +1,7 @@
 import { collectionData } from "@/utils/constant";
 import Image from "next/image";
 import { MotionContainer } from "./MotionContainer";
+import Link from "next/link";
 
 const Collections = () => {
   const stagger = 0.25;
@@ -55,6 +56,11 @@ const Collections = () => {
               </MotionContainer>
             ))}
           </div>
+          <Link href="/collections">
+            <button className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300">
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     </section>

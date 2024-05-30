@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { MdClose, MdWbSunny } from "react-icons/md";
 import { FaBars, FaDiscord } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
@@ -14,28 +15,28 @@ const navLinks = [
 
   {
     text: "About",
-    href: "/",
+    href: "/about",
   },
 
   {
     text: "roadmap",
-    href: "/",
+    href: "/roadmap",
   },
 
   {
     text: "COLLECTION",
-    href: "/",
+    href: "/collections",
   },
 
   {
     text: "FAQS",
-    href: "/",
+    href: "/faqs",
   },
 ];
 
 const Header = () => {
   const [mobileNav, setMobileNav] = useState<boolean>(false);
-
+  const pathname = usePathname();
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -76,7 +77,9 @@ const Header = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="text-base uppercase font-normal text-white font-bak flex items-center justify-start gap-2 cursor-pointer hover:text-primary transition-all duration-300"
+                className={`text-base uppercase font-normal font-bak flex items-center justify-start gap-2 cursor-pointer hover:text-primary transition-all duration-300 ${
+                  pathname === item.href ? "text-primary" : "text-white"
+                }`}
               >
                 {item.text}
               </Link>
