@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MotionContainer } from "./MotionContainer";
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Hero = () => {
   return (
@@ -40,12 +41,10 @@ const Hero = () => {
           transition={{ type: "spring", duration: 1, delay: 0.2 }}
         >
           <div className="flex w-full items-center justify-center gap-5">
-            <button
-              type="button"
-              className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 bg-primary rounded text-xs md:text-base font-bak font-normal uppercase text-dark hover:opacity-80 transition-all duration-300"
-            >
-              connect wallet
-            </button>
+            <ConnectWallet
+              btnTitle="Connect Wallet"
+              className="!w-fit !px-3 !py-3 md:!px-6 !flex !items-center !justify-center !gap-3 !bg-primary !rounded !text-xs md:!text-base !font-bak !font-normal !uppercase !text-dark hover:!opacity-80 !transition-all !duration-300"
+            />
             <button
               type="button"
               className="w-fit px-3 py-3 md:px-6 flex items-center justify-center gap-3 border-2 border-primary rounded text-xs md:text-base font-bak font-normal uppercase text-white hover:opacity-80 transition-all duration-300"

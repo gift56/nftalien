@@ -123,21 +123,10 @@ const Header = () => {
         >
           <div className="w-full flex flex-col items-start gap-8">
             <div className="w-full flex items-center justify-end gap-6">
-              <button
-                type="button"
-                className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300"
-              >
-                <Image
-                  src="/icons/walletIcon.png"
-                  alt="wallet icon"
-                  priority
-                  width={21}
-                  height={18}
-                />
-                <span className="text-base font-bak font-normal uppercase text-dark">
-                  Connect
-                </span>
-              </button>
+              <ConnectWallet
+                btnTitle="Connect"
+                className="!w-fit !py-2 !px-6 !flex !items-center !justify-center !gap-3 !bg-primary !rounded hover:!opacity-80 !transition-all !duration-300"
+              />
               <span className="text-white" onClick={() => setMobileNav(false)}>
                 <MdClose size={25} />
               </span>
