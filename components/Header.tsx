@@ -20,8 +20,8 @@ const navLinks = [
   },
 
   {
-    text: "roadmap",
-    href: "/roadmap",
+    text: "minter",
+    href: "/minter",
   },
 
   {
