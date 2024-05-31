@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { MotionContainer } from "./MotionContainer";
 import { ConnectWallet } from "@thirdweb-dev/react";
