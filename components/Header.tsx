@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { MdClose, MdWbSunny } from "react-icons/md";
 import { FaBars, FaDiscord } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 const navLinks = [
   {
@@ -98,21 +99,10 @@ const Header = () => {
                 Discord
               </span>
             </Link>
-            <button
-              type="button"
-              className="w-fit py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300"
-            >
-              <Image
-                src="/icons/walletIcon.png"
-                alt="wallet icon"
-                priority
-                width={21}
-                height={18}
-              />
-              <span className="text-base font-bak font-normal uppercase text-dark">
-                Connect
-              </span>
-            </button>
+            <ConnectWallet
+              btnTitle="Connect"
+              className="!w-fit !py-2 !px-6 !flex !items-center !justify-center !gap-3 !bg-primary !rounded hover:!opacity-80 !transition-all !duration-300"
+            />
           </div>
           <span
             onClick={() => setMobileNav((prev) => !prev)}

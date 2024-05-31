@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ThirdwebProviderContainer from "@/Providers/ThirdwebProviderContainer";
 
 export const metadata: Metadata = {
   title: "NFTALIEN - EXPLORE NFT COLLECTION",
@@ -16,11 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <ThirdwebProviderContainer>
+        <body>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </ThirdwebProviderContainer>
     </html>
   );
 }
