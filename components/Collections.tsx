@@ -26,7 +26,7 @@ const Collections = () => {
             </h2>
           </MotionContainer>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
-            {collectionData.map((item, index) => (
+            {collectionData.slice(0, 8).map((item, index) => (
               <MotionContainer
                 key={index}
                 variants={variants}
