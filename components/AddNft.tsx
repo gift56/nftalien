@@ -1,6 +1,7 @@
 "use client";
 
 import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
+import Image from "next/image";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { FaUpload, FaWallet } from "react-icons/fa";
 
@@ -27,10 +28,12 @@ const AddNftMinter = () => {
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
+    setMintingNft(true);
     // Handle form submission logic here
     console.log("NFT Name:", nftName);
     console.log("NFT Description:", nftDescription);
     console.log("Media File:", mediaFile);
+    setMintingNft(false);
   };
 
   return (
@@ -85,8 +88,9 @@ const AddNftMinter = () => {
                 type="text"
                 id="nft-name"
                 value={nftName}
+                placeholder="My NFT name"
                 onChange={(e) => setNftName(e.target.value)}
-                className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300"
+                className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300 px-4"
               />
             </div>
             <div className="flex flex-col gap-3 items-start justify-start w-full">
@@ -99,15 +103,31 @@ const AddNftMinter = () => {
               <textarea
                 id="nft-description"
                 value={nftDescription}
+                placeholder="The NFT is..."
                 onChange={(e) => setNftDescription(e.target.value)}
-                className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300 resize-y"
+                className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300 resize-y px-4 pt-3"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300 text-white"
+              disabled={mintingNft}
+              className="w-full py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 disabled:cursor-not-allowed disabled:bg-primary/60 transition-all duration-300 text-white"
             >
-              Mint NFT
+              {mintingNft ? (
+                <div className="flex items-center justify-center gap-4">
+                  <span>Minting</span>
+                  <Image
+                    src="/icons/loading.svg"
+                    alt="minting nft"
+                    width={10}
+                    height={10}
+                  />
+                </div>
+              ) : (
+                <div>
+                  <span>Mint NFT</span>
+                </div>
+              )}
             </button>
           </div>
         </form>
