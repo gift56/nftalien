@@ -6,13 +6,23 @@ import { FaUpload, FaWallet } from "react-icons/fa";
 
 const AddNftMinter = () => {
   const address = useAddress();
-  const [mediaFile, setMediaFile] = useState<File | null>(null);
+  const [mediaFile, setMediaFile] = useState<string | null>(null);
+  const [showFileName, setShowFileName] = useState<File | null>(null)
   const [nftName, setNftName] = useState<string>("");
   const [nftDescription, setNftDescription] = useState<string>("");
 
+  const processFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setMediaFile(reader.result as string);
+    };
+    reader.readAsDataURL(file);
+  };
+
   const handleMediaChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
-      setMediaFile(event.target.files[0]);
+      processFile(event.target.files[0]);
+      setShowFileName(event.target.files[0])
     }
   };
 
@@ -37,15 +47,15 @@ const AddNftMinter = () => {
           <div className="w-full md:flex-1">
             <label
               htmlFor="media-upload"
-              className="flex flex-col items-center justify-center w-full h-[310px] p-5 border-2 gap-5 border-dashed border-gray-3 rounded-lg cursor-pointer text-gray-500 text-2xl font-medium text-center"
+              className="flex flex-col items-center justify-center w-full h-[310px] p-5 border-2 gap-5 border-dashed border-gray-3 rounded-lg cursor-pointer text-gray-500 text-2xl font-medium text-center truncate"
             >
               <FaUpload className="upload-icon" />
-              {mediaFile ? mediaFile.name : "Upload NFT Media"}
+              {mediaFile ? showFileName?.name.substring(0, 60) : "Upload NFT Media"}
             </label>
             <input
               type="file"
               id="media-upload"
-              accept="image/*,video/*,audio/*"
+              accept="image/*"
               onChange={handleMediaChange}
               className="hidden"
             />
