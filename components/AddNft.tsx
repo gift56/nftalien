@@ -1,15 +1,15 @@
 "use client";
 
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { FaUpload, FaWallet } from "react-icons/fa";
 
 const AddNftMinter = () => {
   const address = useAddress();
   const [mediaFile, setMediaFile] = useState<string | null>(null);
-  const [showFileName, setShowFileName] = useState<File | null>(null)
   const [nftName, setNftName] = useState<string>("");
   const [nftDescription, setNftDescription] = useState<string>("");
+  const [mintingNft, setMintingNft] = useState<boolean>(false);
 
   const processFile = (file: File) => {
     const reader = new FileReader();
@@ -22,7 +22,6 @@ const AddNftMinter = () => {
   const handleMediaChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       processFile(event.target.files[0]);
-      setShowFileName(event.target.files[0])
     }
   };
 
@@ -49,8 +48,19 @@ const AddNftMinter = () => {
               htmlFor="media-upload"
               className="flex flex-col items-center justify-center w-full h-[310px] p-5 border-2 gap-5 border-dashed border-gray-3 rounded-lg cursor-pointer text-gray-500 text-2xl font-medium text-center truncate"
             >
-              <FaUpload className="upload-icon" />
-              {mediaFile ? showFileName?.name.substring(0, 60) : "Upload NFT Media"}
+              {mediaFile ? (
+                <div className="h-full w-full flex flex-col items-center justify-center">
+                  <MediaRenderer src={mediaFile} height="100%" width="100%" />
+                  <button className="w-fit text-sm text-primary">
+                    Change Selected Image
+                  </button>
+                </div>
+              ) : (
+                <div className="w-full flex flex-col items-center justify-center  gap-5">
+                  <FaUpload className="upload-icon" />
+                  <span>Upload NFT Media</span>
+                </div>
+              )}
             </label>
             <input
               type="file"
@@ -95,7 +105,7 @@ const AddNftMinter = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300"
+              className="w-full py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 transition-all duration-300 text-white"
             >
               Mint NFT
             </button>
