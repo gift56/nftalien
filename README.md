@@ -1,5 +1,7 @@
 # NFTALIEN
 
+<!-- thirdweb secret key: AsbD1s0zoruJE3NdECOf2v1wnUNaf_NIT-nWbNH1oYlPcKSqwKYVK9UBVdU65qBLk7uXtnq-BbeALYOjDyiX4Q -->
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
