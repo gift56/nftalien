@@ -8,6 +8,7 @@ import { FaUpload, FaWallet } from "react-icons/fa";
 const AddNftMinter = () => {
   const address = useAddress();
   const [mediaFile, setMediaFile] = useState<string | null>(null);
+  const [imageFile, setImageFile] = useState<File | any | null>(null);
   const [nftName, setNftName] = useState<string>("");
   const [nftDescription, setNftDescription] = useState<string>("");
   const [mintingNft, setMintingNft] = useState<boolean>(false);
@@ -23,17 +24,40 @@ const AddNftMinter = () => {
   const handleMediaChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       processFile(event.target.files[0]);
+      setImageFile(event.target.files[0]);
     }
   };
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setMintingNft(true);
-    // Handle form submission logic here
-    console.log("NFT Name:", nftName);
-    console.log("NFT Description:", nftDescription);
-    console.log("Media File:", mediaFile);
-    setMintingNft(false);
+    try {
+      setMintingNft(true);
+      const formData = new FormData();
+      formData.append("name", nftName);
+      formData.append("description", nftDescription);
+      formData.append("imageFile", imageFile);
+      formData.append("address", address || "");
+
+      const response = await fetch("/api/mintnft", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong!");
+      }
+    } catch (error) {
+      console.log("Error:", error);
+    } finally {
+      alert("NFT Minted Successfully!");
+      setMintingNft(false);
+      setMediaFile(null);
+      setImageFile(null);
+      setNftName("");
+      setNftDescription("");
+    }
   };
 
   return (
@@ -71,6 +95,7 @@ const AddNftMinter = () => {
               accept="image/*"
               onChange={handleMediaChange}
               className="hidden"
+              required
             />
           </div>
           <div className="w-full md:flex-1 flex flex-col gap-5 items-start justify-start">
@@ -91,6 +116,7 @@ const AddNftMinter = () => {
                 placeholder="My NFT name"
                 onChange={(e) => setNftName(e.target.value)}
                 className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300 px-4"
+                required
               />
             </div>
             <div className="flex flex-col gap-3 items-start justify-start w-full">
@@ -106,6 +132,7 @@ const AddNftMinter = () => {
                 placeholder="The NFT is..."
                 onChange={(e) => setNftDescription(e.target.value)}
                 className="w-full border border-gray-100 bg-dark h-[50px] rounded outline-none focus:border-primary text-base font-normal text-white placeholder:text-gray-500 transition-all duration-300 resize-y px-4 pt-3"
+                required
               />
             </div>
             <button

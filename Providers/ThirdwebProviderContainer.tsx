@@ -10,7 +10,7 @@ import {
   rainbowWallet,
 } from "@thirdweb-dev/react";
 
-const activeChain = "polygon";
+const activeChain = "ethereum";
 
 const ThirdwebProviderContainer = ({ children }: { children: ReactNode }) => {
   return (
