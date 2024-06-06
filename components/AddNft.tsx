@@ -138,16 +138,18 @@ const AddNftMinter = () => {
             <button
               type="submit"
               disabled={mintingNft}
-              className="w-full py-2 px-6 flex items-center justify-center gap-3 bg-primary rounded hover:opacity-80 disabled:cursor-not-allowed disabled:bg-primary/60 transition-all duration-300 text-white"
+              className={`w-full px-6 flex h-12 items-center justify-center gap-3 bg-primary rounded hover:opacity-80 disabled:cursor-not-allowed disabled:bg-primary/60 transition-all duration-300 text-white ${
+                mintingNft ? "py-0" : "py-0"
+              }`}
             >
               {mintingNft ? (
-                <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-2">
                   <span>Minting</span>
                   <Image
                     src="/icons/loading.svg"
                     alt="minting nft"
-                    width={10}
-                    height={10}
+                    width={60}
+                    height={60}
                   />
                 </div>
               ) : (
