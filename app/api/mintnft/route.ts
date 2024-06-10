@@ -19,7 +19,7 @@ function convertNextRequestToIncomingMessage(
   return readable as unknown as IncomingMessage;
 }
 
-export default async function post(req: NextApiRequest, res: NextApiResponse) {
+async function handleMintNFTRequest(req: NextApiRequest, res: NextApiResponse) {
   const request = convertNextRequestToIncomingMessage(req);
   const form = new IncomingForm();
 
@@ -107,3 +107,5 @@ export default async function post(req: NextApiRequest, res: NextApiResponse) {
     });
   });
 }
+
+export default handleMintNFTRequest;
