@@ -167,7 +167,7 @@ const AddNftMinter = () => {
             <h2 className="text-2xl font-semibold text-start mb-2">
               Connect Your Wallet
             </h2>
-            <p className="text-gray-600 text-center mb-6">
+            <p className="text-gray-600 text-start md:text-center mb-6">
               To start minting your NFTs, please connect your wallet.
             </p>
             <ConnectWallet

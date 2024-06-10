@@ -50,7 +50,7 @@ const Collections = () => {
                     className="!w-full !h-fit"
                   />
                   <h4 className="text-lg font-normal text-white font-bak md:text-xl uppercase">
-                    {item.title}
+                    {item.name}
                   </h4>
                 </div>
               </MotionContainer>

@@ -16,38 +16,199 @@ export const howData = [
     title: "receive Your NFTs",
   },
 ];
+
 export const collectionData = [
   {
     image: "/images/collectionImage1.png",
-    title: "sKISIRS #02",
+    name: "Galactic Guardian",
   },
   {
     image: "/images/collectionImage2.png",
-    title: "sKELATON #01",
+    name: "Nebula Nomad",
   },
   {
     image: "/images/collectionImage3.png",
-    title: "sKISIRS #02",
+    name: "Quantum Explorer",
   },
   {
     image: "/images/collectionImage4.png",
-    title: "sKISIRS #02",
+    name: "Starlight Sage",
   },
   {
     image: "/images/collectionImage5.png",
-    title: "sKISIRS #02",
+    name: "Cosmic Conqueror",
   },
   {
     image: "/images/collectionImage6.png",
-    title: "sKELATON #01",
+    name: "Astro Alchemist",
   },
   {
     image: "/images/collectionImage7.png",
-    title: "sKISIRS #02",
+    name: "Ethereal Emissary",
   },
   {
     image: "/images/collectionImage8.png",
-    title: "sKISIRS #02",
+    name: "Void Voyager",
+  },
+  {
+    image: "/images/collectionImage1.png",
+    name: "Celestial Sentinel",
+  },
+  {
+    image: "/images/collectionImage2.png",
+    name: "Interstellar Invader",
+  },
+  {
+    image: "/images/collectionImage3.png",
+    name: "Lunar Lurker",
+  },
+  {
+    image: "/images/collectionImage4.png",
+    name: "Solar Sorcerer",
+  },
+  {
+    image: "/images/collectionImage5.png",
+    name: "Galactic Gladiator",
+  },
+  {
+    image: "/images/collectionImage6.png",
+    name: "Astro Archivist",
+  },
+  {
+    image: "/images/collectionImage7.png",
+    name: "Nebula Navigator",
+  },
+  {
+    image: "/images/collectionImage8.png",
+    name: "Quantum Quester",
+  },
+  {
+    image: "/images/collectionImage1.png",
+    name: "Stellar Shaman",
+  },
+  {
+    image: "/images/collectionImage2.png",
+    name: "Cosmic Cartographer",
+  },
+  {
+    image: "/images/collectionImage3.png",
+    name: "Astro Anomaly",
+  },
+  {
+    image: "/images/collectionImage4.png",
+    name: "Galactic Guardian",
+  },
+  {
+    image: "/images/collectionImage5.png",
+    name: "Starship Samurai",
+  },
+  {
+    image: "/images/collectionImage6.png",
+    name: "Nebula Ninja",
+  },
+  {
+    image: "/images/collectionImage7.png",
+    name: "Solar Seer",
+  },
+  {
+    image: "/images/collectionImage8.png",
+    name: "Celestial Cyborg",
+  },
+  {
+    image: "/images/collectionImage1.png",
+    name: "Astro Artisan",
+  },
+  {
+    image: "/images/collectionImage2.png",
+    name: "Stellar Scout",
+  },
+  {
+    image: "/images/collectionImage3.png",
+    name: "Void Vanguard",
+  },
+  {
+    image: "/images/collectionImage4.png",
+    name: "Cosmic Conduit",
+  },
+  {
+    image: "/images/collectionImage5.png",
+    name: "Intergalactic Icon",
+  },
+  {
+    image: "/images/collectionImage6.png",
+    name: "Astral Avenger",
+  },
+  {
+    image: "/images/collectionImage7.png",
+    name: "Nebula Nomad",
+  },
+  {
+    image: "/images/collectionImage8.png",
+    name: "Quantum Explorer",
+  },
+  {
+    image: "/images/collectionImage1.png",
+    name: "Starlight Sage",
+  },
+  {
+    image: "/images/collectionImage2.png",
+    name: "Cosmic Conqueror",
+  },
+  {
+    image: "/images/collectionImage3.png",
+    name: "Astro Alchemist",
+  },
+  {
+    image: "/images/collectionImage4.png",
+    name: "Ethereal Emissary",
+  },
+  {
+    image: "/images/collectionImage5.png",
+    name: "Void Voyager",
+  },
+  {
+    image: "/images/collectionImage6.png",
+    name: "Celestial Sentinel",
+  },
+  {
+    image: "/images/collectionImage7.png",
+    name: "Interstellar Invader",
+  },
+  {
+    image: "/images/collectionImage8.png",
+    name: "Lunar Lurker",
+  },
+  {
+    image: "/images/collectionImage1.png",
+    name: "Solar Sorcerer",
+  },
+  {
+    image: "/images/collectionImage2.png",
+    name: "Galactic Gladiator",
+  },
+  {
+    image: "/images/collectionImage3.png",
+    name: "Astro Archivist",
+  },
+  {
+    image: "/images/collectionImage4.png",
+    name: "Nebula Navigator",
+  },
+  {
+    image: "/images/collectionImage5.png",
+    name: "Quantum Quester",
+  },
+  {
+    image: "/images/collectionImage6.png",
+    name: "Stellar Shaman",
+  },
+  {
+    image: "/images/collectionImage7.png",
+    name: "Cosmic Cartographer",
+  },
+  {
+    image: "/images/collectionImage8.png",
+    name: "Astro Anomaly",
   },
 ];
 

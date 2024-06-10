@@ -1,9 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import { IncomingForm } from "formidable";
 import { ThirdwebStorage } from "@thirdweb-dev/storage";
 import fs from "fs";
 import { Engine } from "@thirdweb-dev/engine";
 import { NFT_CONTRACT_ADDRESS } from "@/walletAddress";
+import { Readable } from "stream";
+import { NextApiRequest, NextApiResponse } from "next";
+import { IncomingMessage } from "http";
 
 export const config = {
   api: {
@@ -11,13 +13,27 @@ export const config = {
   },
 };
 
-export default function POST(request: NextApiRequest) {
+// Convert Next.js Request to Node.js IncomingMessage
+function convertNextRequestToIncomingMessage(
+  req: NextApiRequest
+): IncomingMessage {
+  const readable = new Readable();
+  readable._read = () => {};
+  readable.push(req.body);
+  readable.push(null);
+  Object.assign(readable, req);
+  return readable as unknown as IncomingMessage;
+}
+
+export default async function POST(req: NextApiRequest, res: NextApiResponse) {
+  const request = convertNextRequestToIncomingMessage(req);
   const form = new IncomingForm();
 
   return new Promise((resolve, reject) => {
     form.parse(request, async (err, fields, files) => {
       if (err) {
-        return resolve(Response.json({ error: err.message }, { status: 500 }));
+        resolve(res.status(500).json({ error: err.message }));
+        return reject(err);
       }
 
       const name = Array.isArray(fields.name) ? fields.name[0] : fields.name;
@@ -35,7 +51,7 @@ export default function POST(request: NextApiRequest) {
 
       if (!name || !description || !address || !imageFile) {
         return resolve(
-          Response.json({ error: "Missing required fields" }, { status: 400 })
+          res.status(400).json({ error: "Missing required fields" })
         );
       }
 
@@ -53,10 +69,7 @@ export default function POST(request: NextApiRequest) {
         !TW_SECRET_KEY
       ) {
         return resolve(
-          Response.json(
-            { error: "Missing environment variables" },
-            { status: 500 }
-          )
+          res.status(500).json({ error: "Missing environment variables" })
         );
       }
 
@@ -89,13 +102,13 @@ export default function POST(request: NextApiRequest) {
         fs.unlinkSync(imageFile.filepath);
 
         resolve(
-          Response.json(
-            { message: "NFT Minted Successfully", data: response },
-            { status: 200 }
-          )
+          res.status(200).json({
+            message: "NFT Minted Successfully",
+            data: response,
+          })
         );
       } catch (error: any) {
-        resolve(Response.json({ error: error.message }, { status: 500 }));
+        resolve(res.status(500).json({ error: error.message }));
       }
     });
   });
