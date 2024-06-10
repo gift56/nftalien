@@ -19,7 +19,7 @@ function convertNextRequestToIncomingMessage(
   return readable as unknown as IncomingMessage;
 }
 
-export default async function POST(req: NextApiRequest, res: NextApiResponse) {
+export default async function post(req: NextApiRequest, res: NextApiResponse) {
   const request = convertNextRequestToIncomingMessage(req);
   const form = new IncomingForm();
 
