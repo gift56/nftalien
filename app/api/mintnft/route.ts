@@ -7,12 +7,6 @@ import { Readable } from "stream";
 import { NextApiRequest, NextApiResponse } from "next";
 import { IncomingMessage } from "http";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 // Convert Next.js Request to Node.js IncomingMessage
 function convertNextRequestToIncomingMessage(
   req: NextApiRequest
