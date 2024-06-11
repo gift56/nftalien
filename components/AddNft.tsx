@@ -38,6 +38,8 @@ const AddNftMinter = () => {
       formData.append("imageFile", imageFile);
       formData.append("address", address || "");
 
+      console.log(formData);
+
       const response = await fetch("/api/mintnft", {
         method: "POST",
         body: formData,
