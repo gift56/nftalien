@@ -38,7 +38,7 @@ const How = () => {
                   ease: "easeInOut",
                   duration: 0.5,
                 }}
-                className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 h-[210px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
+                className="w-full py-5 px-2 flex flex-col items-center justify-center gap-4 md:h-[210px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:w-[20%] before:hover:h-[184%] before:hover:md:h-[170%] before:hover:bg-cardLinear before:hover:rotate-[-58deg] before:hover:md:rotate-[-52deg] before:transition-all before:duration-300 after:content-[''] after:absolute after:inset-[5px] after:bg-dark"
               >
                 <div className="relative z-10 w-full flex flex-col items-center justify-center gap-4">
                   <Image
