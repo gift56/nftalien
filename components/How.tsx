@@ -21,7 +21,7 @@ const How = () => {
             transition={{ type: "spring", duration: 1 }}
           >
             <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal">
-              HOW TO <span className="font-bak text-primary">NFTALIEN</span>{" "}
+              HOW <span className="font-bak text-primary">NFTALIEN</span>{" "}
               WORK
             </h2>
           </MotionContainer>
