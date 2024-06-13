@@ -36,7 +36,7 @@ const Collections = () => {
                 transition={{
                   delay: index * stagger,
                   ease: "easeInOut",
-                  duration: 0.5,
+                  duration: 0.2,
                 }}
                 className="w-full py-4 px-2 flex flex-col items-start justify-start gap-4 h-[350px] relative overflow-hidden bg-dark before:hover:content-[''] before:hover:absolute before:hover:top-[-42%] before:left-[48%] before:hover:w-[20%] before:hover:h-[200%] before:hover:bg-cardLinear before:hover:rotate-[-40deg] before:transition-all before:duration-300 after:hover:content-[''] after:hover:absolute after:hover:inset-[5px] after:hover:bg-dark"
               >
