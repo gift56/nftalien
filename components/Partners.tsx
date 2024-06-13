@@ -35,7 +35,7 @@ const Partners = () => {
                 transition={{
                   delay: index * stagger,
                   ease: "easeInOut",
-                  duration: 0.2,
+                  duration: 0.1,
                 }}
                 className="w-full h-[80px] hover:bg-dark flex items-center justify-center transition-all duration-300"
               >
