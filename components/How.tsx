@@ -20,9 +20,9 @@ const How = () => {
             viewport={{ once: true }}
             transition={{ type: "spring", duration: 1 }}
           >
-            <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal">
+            <h2 className="font-bak text-xl text-center md:text-2xl lg:text-4xl font-normal uppercase">
               HOW <span className="font-bak text-primary">NFTALIEN</span>{" "}
-              WORK
+              WORKS
             </h2>
           </MotionContainer>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-start gap-5">
